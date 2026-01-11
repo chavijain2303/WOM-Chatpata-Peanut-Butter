@@ -321,3 +321,129 @@ body {
   border-radius: 16px;
   object-fit: cover;
 }
+/* =========================
+   RESPONSIVE FIXES (SAFE)
+========================= */
+
+/* GLOBAL */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* NAVBAR */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 14px 5%;
+  }
+
+  .logo span {
+    font-size: 24px;
+  }
+}
+
+/* PRODUCT HERO */
+@media (max-width: 900px) {
+  .product-hero {
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 5% 40px;
+  }
+
+  .product-image {
+    align-items: center;
+  }
+
+  .main-image img {
+    max-width: 300px;
+    padding: 24px;
+  }
+
+  .thumbnails {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* PRODUCT INFO */
+@media (max-width: 768px) {
+  .product-info h1 {
+    font-size: 30px;
+  }
+
+  .new-price {
+    font-size: 26px;
+  }
+
+  .old-price {
+    font-size: 16px;
+  }
+
+  .size-buttons button {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+
+  .quantity {
+    font-size: 18px;
+    gap: 14px;
+  }
+
+  .add-to-cart {
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  .badges {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* PRODUCT DETAILS (MAIN FIX) */
+@media (max-width: 900px) {
+  .details-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .details-left h2 {
+    font-size: 26px;
+  }
+
+  .accordion-header {
+    font-size: 18px;
+  }
+
+  .accordion-content {
+    font-size: 16px;
+    padding-left: 28px;
+  }
+
+  .details-right img {
+    max-height: 320px;
+    object-fit: cover;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+  .main-image img {
+    max-width: 260px;
+    padding: 18px;
+  }
+
+  .thumbnails img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .product-info h1 {
+    font-size: 26px;
+  }
+}
