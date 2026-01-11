@@ -1,0 +1,152 @@
+/* =========================
+   GLOBAL FONT
+========================= */
+body {
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollOffer {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  width: 100%;
+  animation: slideDown 0.7s ease forwards;
+}
+
+/* =========================
+   OFFER STRIP (MOVING)
+========================= */
+.offer-strip {
+  background: #4a2c14;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 8px 0;
+  font-size: 13px;
+  letter-spacing: 0.6px;
+}
+
+.offer-track {
+  display: inline-flex;
+  gap: 60px;
+  animation: scrollOffer 18s linear infinite;
+}
+
+.offer-track span {
+  display: inline-block;
+}
+
+.offer-track strong {
+  font-weight: 700;
+}
+
+/* =========================
+   MAIN NAV
+========================= */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: #fff;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo span {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.logo span:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  position: relative;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  transition: color 0.25s ease;
+}
+
+/* Underline animation */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #4a2c14;
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #4a2c14;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   NAV ICONS
+========================= */
+.nav-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 18px;
+}
+
+.nav-icons span {
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.nav-icons span:hover {
+  transform: translateY(-3px) scale(1.1);
+  color: #4a2c14;
+}
